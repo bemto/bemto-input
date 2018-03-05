@@ -1,0 +1,39 @@
+{
+  "name": "bemto-input",
+  "version": "0.1.0",
+  "description": "Complex input foundation based on bemto-components & styled-components",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bemto/bemto-input.git"
+  },
+  "keywords": [
+    "input",
+    "css",
+    "react",
+    "bemto",
+    "styled-components"
+  ],
+  "author": "Roman Komarov <kizu@kizu.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bemto/bemto-input/issues"
+  },
+  "homepage": "https://github.com/bemto/bemto-input#readme",
+  "dependencies": {
+    "bemto-components": "^2.0.0"
+  },
+  "peerDependencies": {
+    "styled-components": ">= 2 < 4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.4.2",
+    "jest-styled-components": "^5.0.0",
+    "react-test-renderer": "16.1.1"
+  }
+}

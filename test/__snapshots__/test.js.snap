@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Just an input 1`] = `
+.c0 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: 100%;
+}
+
+.c0__OuterBefore,
+.c0__OuterAfter,
+.c0__Before,
+.c0__After {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c0__Layout {
+  position: relative;
+  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  min-width: 0;
+  cursor: text;
+}
+
+.c0__View {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.c0__ControllerWrap {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.c0__Placeholder,
+.c0__PlaceholderHint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c0__Placeholder_inactive,
+.c0__PlaceholderHint_inactive {
+  visibility: hidden;
+}
+
+.c0__Controller {
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: baseline;
+  resize: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c0__Controller::-ms-clear {
+  display: none;
+}
+
+<span
+  className="c0 sc-bdVaJa_empty c0_empty"
+>
+  <label
+    className="__Layout c0__Layout"
+  >
+    <span
+      aria-hidden={true}
+      className="__View c0__View"
+    />
+    <span
+      className="__ControllerWrap c0__ControllerWrap"
+    >
+      <input
+        className="__Controller c0__Controller"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+      />
+    </span>
+  </label>
+</span>
+`;
