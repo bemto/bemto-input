@@ -1,0 +1,16 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "color-hex-case": "upper",
+    "declaration-empty-line-before": null,
+    "comment-empty-line-before": [ "always", {
+      except: ["first-nested"],
+      ignore: ["after-comment"],
+    } ]
+  }
+}
