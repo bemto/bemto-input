@@ -129,7 +129,7 @@ The point of this helper is to add hover styles in a way they won't be “sticky
 
     <Input defaultValue='hover me' />
 
-Note that the default styles (when used without `&__` inside) wouldn't be applied when the input is focused. So if you'd want to have the same behaviour for your overridden selectors, you would need to use `:not(&_focus)` by yourself:
+Note that the default styles (when used without `&__` inside) wouldn't be applied when the input is focused. So if you'd want to have the same behaviour for your overridden selectors, you would need to use `:not(&_focus):not(&_disabled)` by yourself:
 
     const Input = BemtoInput.extend`
       &__View {
@@ -141,7 +141,7 @@ Note that the default styles (when used without `&__` inside) wouldn't be applie
       `)}
 
       ${BemtoInput.hoverCSS(`
-        &:not(&_focus) > &__Layout:hover {
+        &:not(&_focus):not(&_disabled) > &__Layout:hover {
           color: red;
         }
       `)}

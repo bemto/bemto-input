@@ -1,6 +1,6 @@
 {
   "name": "bemto-input",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Complex input foundation based on bemto-components & styled-components",
   "main": "lib/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.2",
+    "jest": "21.2.1",
     "jest-styled-components": "^5.0.0",
     "react-test-renderer": "16.1.1",
     "stylelint": "9.1.3",
