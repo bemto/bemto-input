@@ -1,5 +1,11 @@
 ## Changelog
 
+### v0.4.0 (2018-06-13)
+
+- Added support for controlled input onChange.
+- Fixed onChange fired when there were no change.
+- Updated deps.
+
 ### v0.3.1 (2018-05-21)
 
 - Fixed the input events overwriting.
