@@ -1,5 +1,9 @@
 ## Changelog
 
+### v0.5.0 (2018-07-19)
+
+- Added a custom implementation of `autoFocus` prop, fixes #3.
+
 ### v0.4.0 (2018-06-13)
 
 - Added support for controlled input onChange.
