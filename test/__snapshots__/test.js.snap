@@ -103,6 +103,12 @@ exports[`Just an input 1`] = `
   display: none;
 }
 
+@media (pointer:coarse) {
+  .c0:not(.c0_focus) > * > * > .c0__Controller {
+    pointer-events: none;
+  }
+}
+
 <span
   className="c0 sc-bdVaJa_empty c0_empty"
 >
