@@ -1,6 +1,6 @@
 {
   "name": "bemto-input",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Complex input foundation based on bemto-components & styled-components",
   "main": "lib/index.js",
   "scripts": {

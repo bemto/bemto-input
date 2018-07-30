@@ -1,5 +1,9 @@
 ## Changelog
 
+### v0.5.1 (2018-07-30)
+
+- Removed custom autofocus due to potential remount problems.
+
 ### v0.5.0 (2018-07-19)
 
 - Added a custom implementation of `autoFocus` prop, fixes #3.
