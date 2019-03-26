@@ -7,7 +7,7 @@ This is a foundation for all the text input I use in my markup for more than 4 y
 [version]: https://img.shields.io/npm/v/bemto-input.svg
 [version-link]: https://www.npmjs.com/package/bemto-input
 
-You can use it as a base for highly functional and stylable text inputs which provides basic reset & layout which you could later easily style by extending with styled-components (or use your external styles). This component has all the powers of bemto-components beneath, so you can use modifiers, polymorphic tags and all the other stuff. See the docs of [bemto-components](http://kizu.ru/bemto-components/#elements) for more features and [this component's source code](https://github.com/bemto/bemto-input) to how easily it is done.
+You can use it as a base for highly functional and stylable text inputs which provides basic reset & layout which you could later easily style by extending with styled-components (or use your external styles). This component has all the powers of bemto-components beneath, so you can use modifiers, polymorphic tags and all the other stuff. See the docs of [bemto-components](https://kizu.github.io/bemto-components/#elements) for more features and [this component's source code](https://github.com/bemto/bemto-input) to how easily it is done.
 
 ### Installation & Usage
 
@@ -31,10 +31,10 @@ If you won't do anything else, you'd get just the foundation for complex inputs 
 
     <BemtoInput defaultValue="Hello, world!"/>
 
-But that foundation can be really easily styled by [extending](https://www.styled-components.com/docs/api#extend):
+But that foundation can be really easily styled by [extending](https://www.styled-components.com/docs/basics#extending-styles):
 
     // That's now the proper usage:
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__Layout {
         padding: 5px 10px;
         color: #000;
@@ -61,7 +61,7 @@ But that foundation can be really easily styled by [extending](https://www.style
 
 ### Inner Structure and Elements
 
-The following Elements are available for styling and adding additional props (see the [section about Elements](http://kizu.ru/bemto-components/#elements) for everything about how to use elements):
+The following Elements are available for styling and adding additional props (see the [section about Elements](https://kizu.github.io/bemto-components/#elements) for everything about how to use elements):
 
 - The top level, which would accept only bemto props (those starting from underscore) plus `className` & `style` props.
 - `__Controller` — is the actual input inside, would accept all the other props like `defaultValue`, `type` etc. Visually represents only the text of the input.
@@ -74,7 +74,7 @@ The following Elements are available for styling and adding additional props (se
 
 ### Styling guide
 
-When used with styled-components, you **must** extend the styles. Don't use the component without extending and don't wrap with `styled()` as this would produce unneeded classNames and would be overall worse than `.extend`.
+When used with styled-components, you **must** extend the styles.
 
 1. For the best result you should split the CSS for your inputs among two basic elements: `__Layout` for layout & text styles, and `__View` for everything else (like background, shadows, borders etc).
 
@@ -86,7 +86,7 @@ When used with styled-components, you **must** extend the styles. Don't use the 
 
 While adding focus styles is rather easy, you could want to utilize the `focusCSS` helper whenever you need to add styles just for `&__View`, as it does just that:
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__View {
         box-shadow: 0 0 0 1px;
       }
@@ -109,7 +109,7 @@ By default it would add styles to a `&__View` inside a hovered `&__Layout`, howe
 
 The point of this helper is to add hover styles in a way they won't be “sticky” at mobile iOS by wrapping them with some at-rules.
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__View {
         box-shadow: 0 0 0 1px;
       }
@@ -131,7 +131,7 @@ The point of this helper is to add hover styles in a way they won't be “sticky
 
 Note that the default styles (when used without `&__` inside) wouldn't be applied when the input is focused. So if you'd want to have the same behaviour for your overridden selectors, you would need to use `:not(&_focus):not(&_disabled)` by yourself:
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__View {
         box-shadow: 0 0 0 1px;
       }
@@ -158,7 +158,7 @@ However, in most cases, it should be enough to use this helper without any selec
 Another helper available for inputs is `hocusCSS`. It applies styles for `&__View` (always for it, not like `hoverCSS`), but both when the input is hovered or focused. That makes it really easy to add nice accessible styles if they're not very bright (otherwise it would be better to use separate hover and focus styles).
 
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__View {
         box-shadow: 0 0 0 1px;
       }
@@ -177,7 +177,7 @@ This helper also removes default outline from the `__Controller`.
 
 Basic usage for placeholders:
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__View {
         box-shadow: 0 0 0 1px;
       }
@@ -187,7 +187,7 @@ Basic usage for placeholders:
         color: #AAA;
       }
     `;
-    
+
     <div className='Grid'>
       <Input placeholder="Native placeholder" />
 
@@ -209,7 +209,7 @@ Basic usage for placeholders:
 
 It is really easy to make sliding hints like this, and/or combine with regular custom placeholder. Note that for overriding the default hiding of placeholders its enough to restore `visibility` to `inherit` for their `_inactive` state (never use `visible` for restoring visibility!)
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       margin-bottom: 1em;
 
       &__View {
@@ -251,7 +251,7 @@ It is really easy to make sliding hints like this, and/or combine with regular c
 
 Custom focus styles:
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__Layout {
         padding: 0 0.5em;
       }
@@ -274,7 +274,7 @@ Custom focus styles:
 
 Adding content before/after both inside and outside of the input's area
 
-    const Input = BemtoInput.extend`
+    const Input = styled(BemtoInput)`
       &__Layout {
         padding: 0 0.5em;
       }
